@@ -17,7 +17,7 @@ class KedatanganController extends Controller
         //
         $month = Carbon::today()->subDays(30);
         $konfirmasi = IjinPulangCuti::with('Santri')->where('is_come', 'False')->get();
-        $riwayat = IjinPulangCuti::with('Santri')->where('finish_date', '>=', $month)->where('is_come', 'True')->get();
+        $riwayat = IjinPulangCuti::with('Santri')->where('is_come', 'True')->get();
         
 
         return view('contents.datang')->with(compact('konfirmasi', 'riwayat'));
