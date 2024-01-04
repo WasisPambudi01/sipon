@@ -11,12 +11,16 @@ class Santri extends Model
     use HasFactory;
 
     protected $primaryKey = 'nis';
-    
+
     public function IjinKegiatan(){
         return $this->hasMany(IjinKegiatan::class, 'nis');
     }
 
     public function IjinPulangCuti(){
         return $this->hasMany(IjinPulangCuti::class, 'nis');
+    }
+
+    public function absen(){
+        return $this->hasMany(Absen::class, 'nis');
     }
 }
