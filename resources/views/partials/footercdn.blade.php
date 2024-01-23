@@ -56,7 +56,14 @@
     });
 
     $('#pergiModal').on('shown.bs.modal', function() {
-        $('#reservation2').daterangepicker();
+        $('#reservation2').daterangepicker({
+            maxSpan: {
+                days: 2
+            },
+            locale: {
+                format: 'YYYY-MM-DD',
+            }
+        });
     });
 
     //Datemask dd/mm/yyyy

@@ -9,5 +9,7 @@ class JenisAbsen extends Model
 {
     use HasFactory;
 
+    protected $table = "jenis_absens";
     protected $primaryKey = 'id_act';
+
 }
