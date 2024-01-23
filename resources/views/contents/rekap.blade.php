@@ -63,19 +63,30 @@
                                             <button type="button" class="btn btn-primary">Rekap absen</button>
                                         </div>
                                         </form>
-                                        <table>
-                                            <th>Nama</th>
-                                            <th>Tanggal</th>
-
+                                        <table id="rekap" class="table display dataTable">
+                                            <tr>
+                                                <th>NIS</th>
+                                                <th>Tanggal</th>
+                                                <th>Kegiatan</th>
+                                            </tr>
                                             @foreach ($santri as $data)
                                                 <tr>
-                                                    {{ $data }}
+                                                    <td>
+                                                        {{ $data->nis }}
+                                                    </td>
+                                                    <td>
+                                                        {{ $data->date }}
+                                                    </td>
+                                                    <td>
+                                                        {{ $data->name_act }}
+                                                    </td>
                                                 </tr>
                                             @endforeach
                                         </table>
                                     </div>
 
-                                    <div class="tab-pane fade" id="riwayat" role="tabpanel" aria-labelledby="riwayat-tab">
+                                    <div class="tab-pane fade" id="riwayat" role="tabpanel"
+                                        aria-labelledby="riwayat-tab">
                                         <table id="riwayat" class="table display dataTable" style="width:100%">
                                             <thead>
                                                 <tr>

@@ -21,6 +21,6 @@ class Santri extends Model
     }
 
     public function absen(){
-        return $this->hasMany(Absen::class, 'nis');
+        return $this->hasMany(Absen::class,'nis','nis');
     }
 }
